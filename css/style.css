@@ -726,17 +726,28 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   height: 270px;
   width: 100%;
-  display: table;
+  display: inline-table;
   overflow: hidden;
+  border-radius: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .work {
+    height: 400px;
+    width: 55%;
+    border-radius: 80px;
+  }
 }
 @media screen and (max-width: 768px) {
   .work {
     height: 400px;
+    width: 75%;
+    border-radius: 50px;
   }
 }
 @media screen and (max-width: 480px) {
   .work {
-    height: 270px;
+    height: 270px;width: 75%;
+    border-radius: 40px;
   }
 }
 .work .desc {
@@ -767,18 +778,38 @@ h1, h2, h3, h4, h5, h6, figure {
   -webkit-transform: translate3d(0, 15px, 0);
   transform: translate3d(0, 15px, 0);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .work .desc {
     opacity: 1;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.3);
   }
   .work .desc h3 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    font-size: 50px;
+    text-align: match-parent;
+    font-weight: 999;
   }
   .work .desc span {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .work .desc {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .work .desc h3 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    font-size: 35px;
+    font-weight: 999;
+  }
+  .work .desc span {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+   
   }
 }
 .work:hover .desc {
