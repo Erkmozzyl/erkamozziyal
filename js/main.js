@@ -36,7 +36,10 @@
 
 	// Parallax
 	var parallax = function() {
-		$(window).stellar();
+		$.stellar({
+			horizontalScrolling: false,
+			responsive: true
+		});
 	};
 
 	var contentWayPoint = function() {
